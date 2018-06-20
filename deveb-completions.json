@@ -1,0 +1,39 @@
+{
+	"attributes":[
+		"data-sekme",
+		"data-metin",
+		"data-kenar",
+		"data-arka",
+
+		"data-gnl",
+		"data-mnk",
+		"data-ufk",
+		"data-kçk",
+		"data-ort",
+		"data-byk",
+		"data-kcm",
+		"data-dev"
+	],
+
+	"classes":[
+		"ortada",
+		"sağda",
+		"gergin",
+		"altta",
+		"yan",
+
+		"ana",
+		"ara",
+		"birincil",
+		"ikincil",
+		"en-soluk",
+		"çok-soluk",
+		"soluk",
+		"az-soluk",
+		"normal",
+		"az-parlak",
+		"parlak",
+		"çok-parlak",
+		"en-parlak"
+	]
+}

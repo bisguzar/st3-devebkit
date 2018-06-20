@@ -1,0 +1,27 @@
+{
+	"sekme":{
+		"frame":[
+			"<div data-sekme=\"\">",
+			"{content}",
+			"</div>"
+		],
+		"element":[
+			"    <input id=\"{id}\" type=\"radio\" name=\"{name}\">",
+			"    <label for=\"{id}\">{baslik}</label>",
+			"    <div>",
+			"        {id} ID'li sekme alanı.",
+			"    </div>"
+		]
+	},
+
+	"dizem":{
+		"frame":[
+			"<div data-gnl=\"{key}\">",
+			"{content}",
+			"</div>"
+		],
+		"element":[
+			"    <div> {cursor} </div>"
+		]
+	}
+}
