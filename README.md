@@ -32,6 +32,4 @@ Bu proje MIT lisansi ile korunmaktadır(yani çok da korumuyoruz, özgürsünüz
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Terence Martin (@OdatNurd)
