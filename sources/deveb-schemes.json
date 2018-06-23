@@ -23,5 +23,13 @@
 		"element":[
 			"    <div> {cursor} </div>"
 		]
+	},
+	"parça_düzeni":{
+		"element":[
+			"<{tag} data-gnl=\"{piece} {sum}p\">",
+      		"    {cursor}",
+    		"</{tag}>"
+		],
+		"supported_elements":["div", "img"]
 	}
 }

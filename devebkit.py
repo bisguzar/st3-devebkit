@@ -6,23 +6,26 @@ import uuid
 import re
 
 
+def plugin_loaded():
+
+    data = json.loads(
+        sublime.load_resource(sublime.find_resources("deveb-completions*")[0])
+    )
+
+    list_of_attributes = [i for i in data["attributes"]]
+    DevebAutoComplations.class_completions = [
+        ("%s \tdeveb class" % s, s) for s in data["classes"]
+    ]
+    DevebAutoComplations.data_completions = [
+        ("%s \t deveb attribute" % s, '%s="$1"' % s) for s in data["attributes"]
+    ]
+
+    DevebSchemeCommand.schemes = json.loads(
+        sublime.load_resource(sublime.find_resources("deveb-schemes*")[0])
+    )
+
+
 class DevebAutoComplations(sublime_plugin.EventListener):
-    def __init__(self):
-
-        data = json.loads(
-            sublime.load_resource(sublime.find_resources("deveb-completions*")[0])
-        )
-
-        self.data, data = data, None
-        self.list_of_attributes = [i for i in self.data["attributes"]]
-        self.class_completions = [
-            ("%s \tdeveb class" % s, s) for s in self.data["classes"]
-        ]
-        self.data_completions = [
-            ("%s \t deveb attribute" % s, '%s="$1"' % s)
-            for s in self.data["attributes"]
-        ]
-
     def on_query_completions(self, view, prefix, locations):
 
         if view.match_selector(locations[0], "text.html string.quoted"):
@@ -71,9 +74,6 @@ class DevebSchemeCommand(sublime_plugin.TextCommand):
     def __init__(self, view):
         super().__init__(view)
         self.index = -1
-        self.schemes = json.loads(
-            sublime.load_resource(sublime.find_resources("deveb-schemes*")[0])
-        )
 
     def run(self, edit):
         # Get the last word of the line the cursor is on, then discard the word
@@ -123,6 +123,28 @@ class DevebSchemeCommand(sublime_plugin.TextCommand):
                 sublime.Region(
                     point,
                     point - len(re.match("^.*de?ve?b\.(\d*r)\.?(\d*)?$", word).group()),
+                ),
+                "",
+            )
+            self.view.run_command("insert_snippet", {"contents": text})
+
+        elif re.match("^.*de?ve?b\.(\d-(?:\d-)*(?:\d*)?)(\.[a-z]*)?$", word):
+            reg_text = re.match("^.*de?ve?b\.(\d-(?:\d-)*(?:\d*)?)(\.[a-z]*)?$", word)
+            pieces = reg_text.group(1)
+            tag = reg_text.group(2)
+
+            text = self.piece_layout(pieces, tag)
+
+            self.view.replace(
+                edit,
+                sublime.Region(
+                    point,
+                    point
+                    - len(
+                        re.match(
+                            "^.*de?ve?b\.(\d-(?:\d-)*(?:\d*)?)(\.[a-z]*)?$", word
+                        ).group()
+                    ),
                 ),
                 "",
             )
@@ -182,3 +204,37 @@ class DevebSchemeCommand(sublime_plugin.TextCommand):
             )
 
         return frame.format(content="\n".join(prepare_elements), key=key)
+
+    def piece_layout(self, pieces, tag):
+        element = "\n".join(self.schemes["parça_düzeni"]["element"])
+        supported_elements = self.schemes["parça_düzeni"]["supported_elements"]
+
+        pieces = pieces.split("-")
+        pieces = [int(piece) for piece in pieces]
+        sum_of_pieces = sum(pieces)
+        prepare_elements = []
+
+        # Checking variables
+        for number in pieces:  # We don't want zeros as piece
+            if not number:
+                return
+        if sum_of_pieces > 24:  # Summary of pieces should less than 24
+            return
+        if not tag:
+            tag = "div"
+        else:
+            tag = tag.replace(".", "")
+            if not tag in supported_elements:
+                return
+
+        for number, piece in enumerate(pieces):
+            prepare_elements.append(
+                element.format(
+                    tag=tag,
+                    piece=piece,
+                    sum=sum_of_pieces,
+                    cursor="$0" if not number else "",
+                )
+            )
+
+        return "\n".join(prepare_elements)
