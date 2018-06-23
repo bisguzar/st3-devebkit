@@ -1,42 +1,22 @@
-# devebkit
+<p align="center">
+  <img src="https://github.com/bisguzar/st3-devebkit/blob/master/assests/devebkit.gif?raw=true" /><br>
+  deveb önyüz çatısı için yardımcı Sublime Text eklentisi.
+</p>
 
-deveb önyüz çatısı için yardımcı Sublime Text eklentisi.
 
-## Başlarken
+## Versioning
 
-devebkit Sublime Text pluginini kullanmak için tek ihtiyacınız olan sisteminizde kurulu bir Sublime Text.
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/bisguzar/st3-devebkit/tags). 
 
-### Kurulum
-
-#### Package Control ile Kurulum
-
-Sublime Text'de eklenti paketlerini yönetmek için Package Control adında bir servisten yararlanıyoruz. devebkit'i de Yakında Package Control ile kurabileceksiniz.
-
-#### Manuel Kurulum
-
-Preferences > Browse Packages menü seçeneği ile paketlerin bulunduğu klasörü açın.
-
-**Seçenek 1 -** Bu depoyu klasör içine klonlayın.
-
-**Seçenek 2 -** Bu depoyu .zip olarak indirip arşiv içeriğini klasörün içine çıkartın.
-
-## Destek Olmak
-
-Bu projeye iki şekilde destek olabilirsiniz. İlk olarak bu aracı kullanırken karşılaştığınız hataları [issues](https://github.com/your/project/issues) sayfasına yazarak bize bildirebilirsiniz ve biz de bu hataları düzeltmek için çalışabiliriz. Ya da bu projenin bir kopyasını (fork) oluşturup üzerinde geliştirmeler yaptıktan sonra bize gönderebilirsiniz (pull-request). Biz de sizin geliştirmelerinizi de projeye dahil edebiliriz.
-
-## Versiyonlar
-
-Sürümleri belirtmek için [SemVer](http://semver.org/) kullanıyoruz. Yayınlanmış versiyonları görmek için [bu projenin etiketleri](https://github.com/your/project/tags)ne göz atın. 
-
-## Geliştiriciler
+## Authors
 
 * **Bugra ISGUZAR** - *Initial work* - [Bisguzar](https://github.com/bisguzar)
 
-Tüm destekçilerin listesini görmek için [contributors](https://github.com/your/project/contributors) sayfasına da bakabilirsiniz.
+See also the list of [contributors](https://github.com/bisguzar/st3-devebkit/graphs/contributors) who participated in this project.
 
-## Lisans
+## License
 
-Bu proje MIT lisansi ile korunmaktadır(yani çok da korumuyoruz, özgürsünüz) - detaylar için [LICENSE.md](LICENSE.md) dosyasına göz atabilirsiniz.
+This project is licensed under the MIT License (so we are not protecting actually) - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
