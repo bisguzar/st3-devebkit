@@ -4,13 +4,21 @@ deveb önyüz çatısı için yardımcı Sublime Text eklentisi.
 
 ## Başlarken
 
-TODO
+devebkit Sublime Text pluginini kullanmak için tek ihtiyacınız olan sisteminizde kurulu bir Sublime Text.
 
 ### Kurulum
 
-TODO
+#### Package Control ile Kurulum
 
-End with an example of getting some data out of the system or using it for a little demo
+Sublime Text'de eklenti paketlerini yönetmek için Package Control adında bir servisten yararlanıyoruz. devebkit'i de Yakında Package Control ile kurabileceksiniz.
+
+#### Manuel Kurulum
+
+Preferences > Browse Packages menü seçeneği ile paketlerin bulunduğu klasörü açın.
+
+**Seçenek 1 -** Bu depoyu klasör içine klonlayın.
+
+**Seçenek 2 -** Bu depoyu .zip olarak indirip arşiv içeriğini klasörün içine çıkartın.
 
 ## Destek Olmak
 
@@ -32,4 +40,4 @@ Bu proje MIT lisansi ile korunmaktadır(yani çok da korumuyoruz, özgürsünüz
 
 ## Acknowledgments
 
-* Terence Martin (@OdatNurd)
+* Terence Martin [(OdatNurd)](https://github.com/OdatNurd)
