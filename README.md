@@ -3,6 +3,7 @@
   deveb önyüz çatısı için yardımcı Sublime Text eklentisi.<br>
   <a href="https://github.com/ambv/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
   <a href=""><img src="https://img.shields.io/dub/l/vibe-d.svg" alt="License" /></a>
+  <a href="https://discord.gg/GeaYaCb/"><img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg" alt="Chat"></a>
 </p>
 
 <p align="center">
