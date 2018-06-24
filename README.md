@@ -3,6 +3,18 @@
   deveb önyüz çatısı için yardımcı Sublime Text eklentisi.
 </p>
 
+<p align="center">
+  <span style="width:50%;">
+    <a href="https://github.com/bisguzar/st3-devebkit/wiki/English">
+      <img src="https://github.com/bisguzar/st3-devebkit/blob/master/assests/docs_left.png?raw=true" />
+    </a>
+  </span>
+  <span style="width:50%;">
+    <a href="https://github.com/bisguzar/st3-devebkit/wiki/Turkish-(T%C3%BCrk%C3%A7e)">
+      <img src="https://github.com/bisguzar/st3-devebkit/blob/master/assests/docs_right.png?raw=true" />
+    </a>
+  </span>
+</p>
 
 ## Versioning
 
