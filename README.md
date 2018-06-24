@@ -1,6 +1,8 @@
 <p align="center">
   <img src="https://github.com/bisguzar/st3-devebkit/blob/master/assests/devebkit.gif?raw=true" /><br>
-  deveb önyüz çatısı için yardımcı Sublime Text eklentisi.
+  deveb önyüz çatısı için yardımcı Sublime Text eklentisi.<br>
+  <a href="https://github.com/ambv/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+  <a href=""><img src="https://img.shields.io/dub/l/vibe-d.svg" alt="License" /></a>
 </p>
 
 <p align="center">
