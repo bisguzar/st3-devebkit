@@ -76,23 +76,9 @@ class DevebSchemeCommand(sublime_plugin.TextCommand):
         self.index = -1
 
     def run(self, edit):
-        # Get the last word of the line the cursor is on, then discard the word
-        # "lorem" from the start, leaving the remainder
         point = self.view.sel()[0].b
         line = self.view.substr(self.view.line(point))
         word = line.split()[-1]
-
-        """
-        repeats = int(word if word != "" else "1")
-
-        self.view.replace(edit, sublime.Region(point, point - 5 - len(word)), "")
-
-
-        for _ in range(repeats):
-            self.view.run_command("insert", {"characters": self.text()})
-            if _ + 1 < repeats:
-                self.view.run_command("insert", {"characters": "\n\n"})
-        """
 
         if re.match("^.*de?ve?b\.sekme(\d*)$", word):
             count = re.match("^.*sekme(.*)$", word).group(1)
@@ -152,17 +138,6 @@ class DevebSchemeCommand(sublime_plugin.TextCommand):
 
         else:
             print("yok")
-
-    def text(self):
-        point = self.view.sel()[0].b
-        col = self.view.rowcol(point)[1]
-        width = next(iter(self.view.settings().get("rulers", [])), 72) - col
-
-        self.index += 1
-        if self.index == len(_paragraphs):
-            self.index = 0
-
-        return textwrap.fill(_paragraphs[self.index], 10 if width < 10 else width)
 
     def create_tabs(self, count):
         frame = "\n".join(self.schemes["sekme"]["frame"])
