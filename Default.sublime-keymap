@@ -1,7 +1,4 @@
 [
-    // Use our own buzzword lorem ipsum generator. It generates buzzword lorem
-    // using a rolling stock of 5 paragraphs and lets you generate multiple
-    // items at once.
     {
         "keys": ["tab"],
         "command": "deveb_scheme",
@@ -11,5 +8,4 @@
             { "key": "following_text", "operator": "regex_match", "operand": "^$", "match_all": true },
         ]
     },
-
 ]
