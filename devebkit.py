@@ -80,15 +80,15 @@ class DevebSchemeCommand(sublime_plugin.TextCommand):
         line = self.view.substr(self.view.line(point))
         word = line.split()[-1]
 
-        if re.match("^.*de?ve?b\.sekme(\d*)$", word):
-            count = re.match("^.*sekme(.*)$", word).group(1)
+        if re.match("^.*de?ve?b\.(sekme|tab)(\d*)$", word):
+            count = re.match("^.*(sekme|tab)(.*)$", word).group(2)
 
             text = self.create_tabs(int(count) if count != "" else 1)
 
             self.view.replace(
                 edit,
                 sublime.Region(
-                    point, point - len(re.match("^.*de?ve?b\.sekme\d*$", word).group())
+                    point, point - len(re.match("^.*de?ve?b\.(sekme|tab)\d*$", word).group())
                 ),
                 "",
             )
